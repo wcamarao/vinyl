@@ -18,7 +18,11 @@ export const searchAlbums = (term) => {
 
     dispatch(requestAlbums(term));
     return axios.get(`${SEARCH_ALBUMS_ENDPOINT}${term}`)
-      .then(response => dispatch(receiveAlbums(response.data.results)));
+      .then(response => dispatch(receiveAlbums(response.data.results)))
+      .catch(error => {
+        console.log(error);
+        dispatch(receiveAlbums([]));
+      });
   };
 };
 
@@ -30,7 +34,11 @@ export const viewAlbum = (id) => {
 
     dispatch(requestAlbum());
     return axios.get(`${LOOKUP_SONGS_ENDPOINT}${id}`)
-      .then(response => dispatch(receiveAlbum(parseLookupResponse(response.data))));
+      .then(response => dispatch(receiveAlbum(parseLookupResponse(response.data))))
+      .catch(error => {
+        console.log(error);
+        dispatch(receiveAlbum(null))
+      });
   };
 };
 
