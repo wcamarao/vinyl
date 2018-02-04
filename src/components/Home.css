@@ -1,0 +1,21 @@
+html, body, #root {
+  height: 100%;
+}
+
+.home {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  width: 300px;
+}
+
+.home .logo img {
+  margin-bottom: 1rem;
+  width: 100px;
+}
+
+.home .album-search {
+  display: inline-block;
+}

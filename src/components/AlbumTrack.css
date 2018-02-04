@@ -1,0 +1,36 @@
+.album-track {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.album-details-track-list .album-track:nth-child(even) {
+  background: #171717;
+}
+
+.album-track-number {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+}
+
+.album-track-name {
+  display: inline-block;
+  max-width: calc(100% - 175px - 4rem);
+}
+
+.album-track-right-column {
+  float: right;
+  text-align: right;
+}
+
+.album-track-time {
+  display: inline-block;
+  width: 50px;
+}
+
+.album-track-price {
+  display: inline-block;
+  width: 75px;
+}

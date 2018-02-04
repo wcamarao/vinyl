@@ -1,0 +1,22 @@
+.layout-header {
+  background: #191919;
+  padding: 0.5rem;
+}
+
+.layout-content {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.layout .logo img {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  width: 42px;
+}
+
+.layout-logo-anchor {
+  display: inline-block;
+}
+
+.layout .album-search {
+  display: inline-block;
+}

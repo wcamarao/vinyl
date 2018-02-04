@@ -1,0 +1,24 @@
+.album-search {
+  background: #eee;
+  border-radius: 0.75rem;
+}
+
+.album-search-input {
+  background: transparent;
+  border: none;
+  color: #313C42;
+  outline: none;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  width: 250px;
+}
+
+.album-search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.album-search-button img {
+  width: 12px;
+}
