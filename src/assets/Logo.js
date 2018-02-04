@@ -1,5 +1,6 @@
 import React from 'react';
-import logoImage from '../assets/logo.svg';
+
+import logoImage from './Logo.svg';
 
 const Logo = () => (
   <figure className="logo">

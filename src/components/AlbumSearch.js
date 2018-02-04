@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { searchAlbums } from '../actions/albumActions';
-import searchImage from '../assets/search.svg';
+
+import history from '../history';
+
 import './AlbumSearch.css';
+import searchImage from '../assets/Search.svg';
 
 class AlbumSearch extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      term: props.empty ? '' : props.term,
+      term: '',
     };
   }
 
   search(e) {
     e.preventDefault();
-    if (this.state.term) {
-      this.props.searchAlbums(this.state.term);
+    const term = encodeURIComponent(this.state.term.trim());
+    if (term) {
+      history.push(`/search/${term}`);
+      this.setState({ term: '' });
     }
   }
 
@@ -39,15 +42,4 @@ class AlbumSearch extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  term: state.albumReducer.term,
-});
-
-const mapDispatchToProps = {
-  searchAlbums,
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AlbumSearch);
+export default AlbumSearch;

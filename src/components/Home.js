@@ -1,14 +1,15 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import Logo from './Logo';
-import AlbumSearch from '../containers/AlbumSearch';
+
+import AlbumSearch from './AlbumSearch';
+import Logo from '../assets/Logo';
+
 import './Home.css';
 
 const Home = () => (
   <section className="home">
     <Logo />
-    <AlbumSearch empty={true} />
+    <AlbumSearch />
   </section>
 );
 
-export default withRouter(Home);
+export default Home;

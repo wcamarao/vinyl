@@ -4,7 +4,6 @@
   border: 4px solid #222;
   color: inherit;
   display: inline-flex;
-  height: 100px;
   margin: 0.5rem;
   padding: 0.5rem;
   text-decoration: none;
@@ -14,6 +13,11 @@
 .album-grid-item:hover {
   opacity: .7;
   transition: opacity .1s ease-out;
+}
+
+.album-grid-item-artwork {
+  display: block;
+  height: 100px;
 }
 
 .album-grid-item-info {

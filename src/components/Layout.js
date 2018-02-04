@@ -1,10 +1,12 @@
-import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import AlbumDetails from './AlbumDetails';
+import React from 'react';
+
+import AlbumDetails from '../containers/AlbumDetails';
 import AlbumGrid from '../containers/AlbumGrid';
-import AlbumSearch from '../containers/AlbumSearch';
-import Logo from './Logo';
+import AlbumSearch from './AlbumSearch';
+import Logo from '../assets/Logo';
 import NotFound from './NotFound';
+
 import './Layout.css';
 
 const Layout = () => (

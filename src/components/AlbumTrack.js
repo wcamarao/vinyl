@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { trackShape } from '../shapes/albumShape';
+
 import './AlbumTrack.css';
 
 const AlbumTrack = ({ track }) => (
@@ -11,5 +14,9 @@ const AlbumTrack = ({ track }) => (
     </div>
   </li>
 );
+
+AlbumTrack.propTypes = {
+  track: trackShape,
+};
 
 export default AlbumTrack;

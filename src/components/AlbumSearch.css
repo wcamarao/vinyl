@@ -1,6 +1,6 @@
 .album-search {
   background: #eee;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
 }
 
 .album-search-input {
@@ -8,15 +8,15 @@
   border: none;
   color: #313C42;
   outline: none;
-  padding: 0.25rem 0 0.25rem 0.5rem;
-  width: 250px;
+  padding: 0.5rem 0 0.5rem 1rem;
+  width: 225px;
 }
 
 .album-search-button {
   background: transparent;
   border: none;
   outline: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .album-search-button img {

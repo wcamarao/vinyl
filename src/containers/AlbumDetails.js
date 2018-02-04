@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
+import { albumDetailShape } from '../shapes/albumShape';
 import { viewAlbum } from '../actions/albumActions';
-import AlbumTrack from './AlbumTrack';
+import AlbumTrack from '../components/AlbumTrack';
+import Loading from '../assets/Loading';
+import NotFound from '../components/NotFound';
+
 import './AlbumDetails.css';
 
 class AlbumDetails extends Component {
@@ -12,16 +18,20 @@ class AlbumDetails extends Component {
   render() {
     const album = this.props.album;
 
+    if (this.props.isLoading) {
+      return <Loading />;
+    }
+
     if (!album) {
-      return null;
+      return <NotFound />;
     }
 
     return (
       <article className="album-details">
         <figure className="album-details-artwork-wrapper">
           <img className="album-details-artwork"
-              alt={album.collectionName}
-              src={album.artworkUrl300} />
+               alt={album.collectionName}
+               src={album.artworkUrl300} />
         </figure>
 
         <section className="album-details-card">
@@ -59,8 +69,16 @@ class AlbumDetails extends Component {
   }
 }
 
+AlbumDetails.propTypes = {
+  album: albumDetailShape,
+  isLoading: PropTypes.bool.isRequired,
+  match: PropTypes.object.isRequired,
+  viewAlbum: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = (state) => ({
   album: state.albumReducer.album,
+  isLoading: state.albumReducer.isLoading,
 });
 
 const mapDispatchToProps = {
